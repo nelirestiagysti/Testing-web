@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rise Of Glory - Home</title>
+  
+   <script src="https://accounts.google.com/gsi/client" async defer></script>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      color: white;
+    }
+
+    /* HEADER */
+    .rog-header {
+      background-color: black;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+    }
+
+    .rog-logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .rog-logo img {
+      height: 30px;
+      margin-right: 10px;
+    }
+
+    .rog-nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    .rog-nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    .rog-nav a:hover {
+      color: red;
+    }
+
+    .rog-icons {
+      display: flex;
+      gap: 15px;
+    }
+
+    .rog-icons i {
+      font-size: 20px;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+
+    .rog-icons i:hover {
+      color: red;
+    }
+
+    /* DROPDOWN */
+    .dropdown {
+      display: none;
+      position: absolute;
+      background-color: white;
+      color: black;
+      border: 1px solid #ccc;
+      right: 20px;
+      top: 40px;
+      width: 200px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .dropdown a {
+      display: block;
+      padding: 10px;
+      text-decoration: none;
+      color: black;
+    }
+
+    .dropdown a:hover {
+      background-color: #f0f0f0;
+    }
+
+    /* MAIN CONTENT */
+    .main-content {
+      background: url('./img/rog_bg_pattern.2e3d71a.jpg') no-repeat center center fixed;
+      background-size: cover;
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .description h1 {
+      color: rgb(255, 255, 255);
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    .description p {
+      font-size: 1.2em;
+      color: #ddd;
+    }
+
+    /* FOOTER */
+    footer {
+      background-color: #000;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    .social-icons a {
+      margin: 0 5px;
+      font-size: 20px;
+    }
+
+    .newsletter {
+      margin-top: 20px;
+    }
+
+    .newsletter input {
+      padding: 10px;
+      width: 250px;
+      margin-right: 10px;
+      border: none;
+    }
+
+    .newsletter button {
+      padding: 10px 20px;
+      background-color: red;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    .newsletter button:hover {
+      background-color: darkred;
+    }
+
+    .error {
+      color: red;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <header class="rog-header">
+    <div class="rog-logo">
+      <img src="img/Logo Universal.png" alt="ROG Logo">
+      <span>RISE OF GLORY</span>
+    </div>
+    <nav class="rog-nav">
+      <a href="#Opmem">OPMEM</a>
+      <a href="#Games">GAMES</a>
+      <a href="#Information">INFORMATION</a>
+      <a href="#download">DOWNLOAD</a>
+      <a href="#community">COMMUNITY</a>
+      <a href="#support">SUPPORT</a>
+      <a href="about.html">ABOUT</a>
+    </nav>
+    <div class="rog-icons">
+      <i class="search-icon">🔍</i>
+      <i class="bell-icon">🔔</i>
+      <i class="cart-icon">🛒</i>
+    </div>
+  </header>
+  
+  <div class="dropdown" id="notification-dropdown">
+    <a href="login.html" id="login-link">Login</a>
+    <a href="#">Daftar</a>
+    <a href="#">Pengaturan</a>
+  </div>
+  
+  <main class="main-content">
+    <div class="description">
+      <h1>Welcome to ROG Universe</h1>
+      <p>Explore the ultimate gaming experience with the latest technology and innovations from Rise of Glory.</p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="content">
+        <p><strong>THE ART OF THE ROG UNIVERSE</strong></p>
+        <p>Teknologi tidak pernah tidur, begitu pula tindakannya. Bagi mereka yang tertarik pada kekuatan menang, Rise Of Glory menanti.</p>
+        <nav>
+            <a href="about.html">ABOUT ROG</a>
+            <a href="#">PRODUCT GUIDE</a>
+            <a href="#">WHERE TO BUY</a>
+            <a href="#">SUPPORT</a>
+            <a href="#">HOME</a>
+        </nav>
+        <div class="social-icons">
+            <a href="#">&#x1F426; Facebook</a>
+            <a href="#">&#x1F426; Twitter</a>
+            <a href="#">&#x1F426; YouTube</a>
+            <a href="#">&#x1F426; Instagram</a>
+        </div>
+        <div class="newsletter">
+            <p>Dapatkan penawaran terbaru dan lebih banyak lagi</p>
+            <input type="email" id="email" placeholder="Masukkan alamat email">
+            <button onclick="subscribe()">Daftar</button>
+            <p class="error" id="error-message"></p>
+        </div>
+        <p>&copy;ASUSTEK COMPUTER INC. ALL RIGHTS RESERVED.</p>
+        <p><a href="#">KEBIJAKAN PRIVASI</a> | <a href="#">TERMS OF USE NOTICE</a></p>
+    </div>
+  </footer>
+
+  <script>
+    const bellIcon = document.querySelector('.bell-icon');
+    const dropdown = document.getElementById('notification-dropdown');
+    bellIcon.addEventListener('click', () => {
+      dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+    });
+
+    const cartIcon = document.querySelector('.cart-icon');
+    cartIcon.addEventListener('click', () => {
+      alert('Keranjang masih kosong!');
+    });
+
+    const searchIcon = document.querySelector('.search-icon');
+    searchIcon.addEventListener('click', () => {
+      alert('Pencarian akan tersedia segera.');
+    });
+
+    function subscribe() {
+      const emailInput = document.getElementById('email');
+      const errorMessage = document.getElementById('error-message');
+      const email = emailInput.value;
+
+      if (validateEmail(email)) {
+          alert('Terima kasih telah berlangganan!');
+          emailInput.value = '';
+          errorMessage.textContent = '';
+      } else {
+          errorMessage.textContent = 'Silakan masukkan alamat email yang valid.';
+      }
+    }
+
+    function validateEmail(email) {
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailPattern.test(email);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - Rise of Glory</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      background-color: #fff;
+    }
+
+    /* Header */
+    .header {
+      background-color: black;
+      color: rgb(255, 255, 255);
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .header .logo {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .header nav a {
+      text-decoration: none;
+      color: white;
+      margin: 0 10px;
+      font-weight: bold;
+    }
+
+    .header nav a:hover {
+      color: rgb(188, 0, 0);
+    }
+
+    /* About Section */
+    .about-container {
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 40px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .about-container h1 {
+      text-align: center;
+      background-color: rgb(0, 0, 0);
+      padding: 10px;
+      color: rgb(255, 255, 255);
+      border-radius: 5px;
+    }
+
+    h2 {
+      margin-top: 30px;
+      color: #e00010;
+    }
+
+    .info {
+      display: flex;
+      align-items: flex-start;
+      margin-top: 10px;
+    }
+
+    .info img {
+      width: 130px;
+      height: 160px;
+      object-fit: cover;
+      border: 2px solid #000;
+      border-radius: 5px;
+      margin-right: 20px;
+    }
+
+    .data p {
+      margin: 5px 0;
+      color: #333;
+    }
+
+    ul {
+      line-height: 1.8;
+      color: #333;
+    }
+
+    a {
+      color: blue;
+    }
+
+    /* Footer */
+    .footer {
+      background-color: black;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .footer .logos img {
+      width: 40px;
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">Rise of Glory</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html" style="color:red;">About</a>
+      <a href="#rules">Rules</a>
+      <a href="#support">Support</a>
+      <a href="#community">Community</a>
+    </nav>
+  </header>
+
+  <!-- About Section -->
+  <section class="about-container">
+    <h1>BIODATA DIRI</h1>
+
+    <h2>Informasi</h2>
+    <div class="info">
+      <img id="foto" src="ROG-main/img/Chappie1.JPG" alt="Foto Profil">
+      <div class="data" id="biodata"></div>
+    </div>
+
+    <h2>Pendidikan</h2>
+    <ul id="pendidikan"></ul>
+
+    <h2>Pengalaman Kerja</h2>
+    <ul id="pengalaman"></ul>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© Rise of Glory. All rights reserved.</p>
+    <div class="logos">
+      <img src="privacy-logo.png" alt="Privacy Policy">
+      <img src="terms-logo.png" alt="Terms of Service">
+    </div>
+  </footer>
+
+  <script>
+    // ===== Data Biodata (ubah sesuai kebutuhan) =====
+    const biodata = {
+        nama: "Muhammad Yasin Al-Asqalani",
+        tempat: "Cianjur",
+        tglLahir: "12 Maret 2003",
+        agama: "Islam",
+        alamat: "Jl. Perintis kemerdekaan no 1, Cianjur, Jawa Barat",
+        email: "muhammadyasinalasqolani@gmail.com",
+        hp: "+62 878-2649-0648",
+        website: "https://github.com/myasinalasqolani",
+        foto: "img/Chappie1.JPG" // <--- sama persis dengan nama file aslinya
+    };
+
+    const pendidikan = [
+      "2008 - 2014 SD Negeri Ibu Dewi 5 Cianjur",
+      "2015 - 2018 MTs Negeri 5 Cianjur",
+      "2018 - 2021 SMK Negeri 2 Cianjur",
+      "2021 - Sekarang Universitas Kebangsaan Republik Indonesia"
+    ];
+
+    const pengalaman = [
+      "2021 - 2023 Kerja sebagai Operator Percetakan di PrintPro",
+    ];
+
+    // ===== Menampilkan Data =====
+    document.getElementById("foto").src = "img/Chappie1.JPG"; // Pastikan nama file sesuai
+
+    document.getElementById("biodata").innerHTML = `
+      <p><strong>Nama</strong> : ${biodata.nama}</p>
+      <p><strong>Tempat</strong> : ${biodata.tempat}</p>
+      <p><strong>Tgl.Lahir</strong> : ${biodata.tglLahir}</p>
+      <p><strong>Agama</strong> : ${biodata.agama}</p>
+      <p><strong>Alamat</strong> : ${biodata.alamat}</p>
+      <p><strong>Email</strong> : ${biodata.email}</p>
+      <p><strong>No.HP</strong> : ${biodata.hp}</p>
+      <p><strong>Website</strong> : <a href="https://${biodata.website}" target="_blank">${biodata.website}</a></p>
+    `;
+
+    pendidikan.forEach(item => {
+      const li = document.createElement("li");
+      li.textContent = item;
+      document.getElementById("pendidikan").appendChild(li);
+    });
+
+    pengalaman.forEach(item => {
+      const li = document.createElement("li");
+      li.textContent = item;
+      document.getElementById("pengalaman").appendChild(li);
+    });
+  </script>
+</body>
+</html>
