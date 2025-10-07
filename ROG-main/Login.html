@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Halaman Login</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Header */
+    .header {
+      background-color: black;
+      color: white;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .header .logo {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .header nav a {
+      text-decoration: none;
+      color: white;
+      margin: 0 10px;
+      font-weight: bold;
+    }
+
+    .header nav a:hover {
+      color: red;
+    }
+
+    /* Main Section */
+    .main-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 50px;
+      gap: 30px;
+    }
+
+    .description {
+      flex: 1;
+      color: #333;
+    }
+
+    .description h2 {
+      color: #e00010;
+    }
+
+    .login-container {
+      flex: 1;
+      background-color: #f4f4f4;
+      padding: 20px 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .login-container h1 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      color: #555;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .form-group input:focus {
+      border-color: #0078d7;
+      outline: none;
+    }
+
+    .btn-login {
+      background-color: #e00010;
+      color: #fff;
+      padding: 10px;
+      width: 100%;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .btn-login:hover {
+      background-color: #c0000e;
+    }
+
+    .google-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background-color: white;
+      border: 1px solid #ccc;
+      color: #555;
+      font-weight: bold;
+      padding: 10px;
+      width: 100%;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .google-btn:hover {
+      background-color: #eee;
+    }
+
+    .link {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .link a {
+      text-decoration: none;
+      color: #0078d7;
+    }
+
+    .link a:hover {
+      text-decoration: underline;
+    }
+
+    /* Footer */
+    .footer {
+      background-color: black;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .footer .logos {
+      margin-top: 10px;
+    }
+
+    .footer .logos img {
+      width: 40px;
+      margin: 0 10px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">Rise of Glory</div>
+    <nav>
+      <a href="#about.html">About</a>
+      <a href="#rules">Rules</a>
+      <a href="#support">Support</a>
+      <a href="#community">Community</a>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <div class="main-container">
+    <!-- Deskripsi -->
+    <div class="description">
+      <h2>Satu Akun, Semua DATA</h2>
+      <p>
+        Masuk untuk mengakses semua fitur eksklusif dari ROG.  
+        Anda dapat:
+      </p>
+      <ul>
+        <li>Mengelola jaminan data Anda</li>
+        <li>Dapatkan dukungan teknis dan lacak perbaikan status Anda</li>
+        <li>Ikuti perkembangan berita dan acara terbaru</li>
+        <li>Berkontribusi dalam Komunitas</li>
+        <li>Berkomunikasi dengan gamer ROG lainnya</li>
+      </ul>
+    </div>
+
+    <!-- Login Form -->
+    <div class="login-container">
+      <h1>Log Masuk</h1>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Masukkan email Anda">
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Masukkan password Anda">
+      </div>
+      <button class="btn-login" onclick="handleLogin()">Log Masuk</button>
+      <button class="btn-login" style="background-color:#555;" onclick="handleRegister()">Daftar</button>
+
+      <p style="text-align:center;margin-top:15px;">atau</p>
+      <div id="g_id_onload"
+          data-client_id="120811507877-41ht064k625b5ra7h5rhgl6vugmghc3n.apps.googleusercontent.com"
+          data-context="signin"
+          data-ux_mode="popup"
+          data-callback="handleGoogleLogin"
+          data-auto_prompt="false">
+      </div>
+      <div class="g_id_signin" data-type="standard"></div>
+
+      <div class="link">
+        <a href="#">Lupa Kata Sandi?</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© Rise of Glory. All rights reserved.</p>
+    <div class="logos">
+      <img src="privacy-logo.png" alt="Privacy Policy">
+      <img src="terms-logo.png" alt="Terms of Service">
+    </div>
+  </footer>
+
+  <!-- Google Identity API -->
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+
+  <script>
+    // Login manual
+    function handleLogin() {
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+
+      if (!email || !password) {
+        alert('Email dan password harus diisi!');
+      } else if (!/\S+@\S+\.\S+/.test(email)) {
+        alert('Email tidak valid!');
+      } else {
+        alert('Login berhasil!');
+      }
+    }
+
+    // Daftar manual
+    function handleRegister() {
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+
+      if (!email || !password) {
+        alert('Isi email dan password untuk daftar!');
+      } else {
+        localStorage.setItem("userEmail", email);
+        localStorage.setItem("userPassword", password);
+        alert('Pendaftaran berhasil! Silakan login.');
+      }
+    }
+
+    // Login pakai Google
+    function handleGoogleLogin(response) {
+      const data = decodeJwtResponse(response.credential);
+      alert(`Selamat datang, ${data.name}!`);
+      console.log("User info:", data);
+      // bisa diarahkan ke halaman utama
+      window.location.href = "index.html";
+    }
+
+    function decodeJwtResponse(token) {
+      const base64Url = token.split('.')[1];
+      const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+      const jsonPayload = decodeURIComponent(atob(base64).split('').map(function(c) {
+          return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+      }).join(''));
+      return JSON.parse(jsonPayload);
+    }
+  </script>
+</body>
+</html>

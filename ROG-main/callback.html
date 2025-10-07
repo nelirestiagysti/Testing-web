@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Callback</title>
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body>
+  <h2>Memproses login dengan Google...</h2>
+
+  <script>
+    window.onload = function() {
+      const query = new URLSearchParams(window.location.search);
+      const credential = query.get('credential');
+      
+      if (credential) {
+        console.log("Token login:", credential);
+        alert("Login dengan Google berhasil!");
+        window.location.href = "index.html"; 
+      } else {
+        alert("Login gagal, coba lagi.");
+        window.location.href = "login.html";
+      }
+    }
+  </script>
+</body>
+</html>
